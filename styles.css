@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: "Roboto", sans-serif;
+}
+
+.twins {
+  width: 340px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.twin {
+  width: 75px;
+  height: 75px;
+  perspective: 600px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 22px;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.card__face {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  backface-visibility: hidden;
+}
+
+.card__face--front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fbfcfc;
+  background-color: #1b2631;
+  border: 2px solid #1b2631;
+}
+
+.card__face--back {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fbfcfc;
+  background-color: #2e86c1;
+  border: 2px solid #21618c;
+  transform: rotateY(180deg);
+}
+
+.card.flip {
+  transform: rotateY(180deg);
+}
+
+@media only screen and (max-width: 500px) {
+  /* .twins {
+    grid-template-columns: repeat(4, 45px);
+  } */
+  .twins {
+    width: 220px;
+  }
+  .twin {
+    width: 45px;
+    height: 45px;
+  }
+}
