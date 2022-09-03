@@ -20,167 +20,190 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
     />
+
+    <link rel="icon" type="image/png" size="32x32" href="./favicon.png" />
+
+    <meta
+      name="description"
+      content="Match twins is a fun game in which we have to flip the given cards and match the twins"
+    />
   </head>
   <body>
-    <h3 class="moves">Moves : 0</h3>
-    <main class="twins">
-      <div class="twin">
-        <div class="card" data-twin="windows">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-windows"></i>
-          </div>
-        </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="windows">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-windows"></i>
-          </div>
-        </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="apple">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-apple"></i>
+    <header>
+      <p>
+        <span class="red">Flip</span>
+        <span class="pink">the</span>
+        <span class="darkBlue">cards</span>
+        <span class="lightBlue">and</span>
+        <span class="green">match</span>
+        <span class="orange">the</span>
+        <span class="purple">twins</span>
+      </p>
+      <p class="moves">
+        <span class="bold">Your moves : </span>
+        <span id="count">0</span>
+      </p>
+    </header>
+    <main>
+      <div class="twins">
+        <div class="twin">
+          <div class="card" data-twin="windows">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back windows">
+              <i class="icon fa-brands fa-windows"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="apple">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-apple"></i>
-          </div>
-        </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="whatsapp">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-whatsapp"></i>
+        <div class="twin">
+          <div class="card" data-twin="windows">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back windows">
+              <i class="icon fa-brands fa-windows"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="whatsapp">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-whatsapp"></i>
-          </div>
-        </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="instagram">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-instagram"></i>
+        <div class="twin">
+          <div class="card" data-twin="apple">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back apple">
+              <i class="icon fa-brands fa-apple"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="instagram">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-instagram"></i>
-          </div>
-        </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="amazon">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-amazon"></i>
+        <div class="twin">
+          <div class="card" data-twin="apple">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back apple">
+              <i class="icon fa-brands fa-apple"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="amazon">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-amazon"></i>
-          </div>
-        </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="spotify">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-spotify"></i>
+        <div class="twin">
+          <div class="card" data-twin="whatsapp">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back whatsapp">
+              <i class="icon fa-brands fa-whatsapp"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="spotify">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-spotify"></i>
-          </div>
-        </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="chrome">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-chrome"></i>
+        <div class="twin">
+          <div class="card" data-twin="whatsapp">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back whatsapp">
+              <i class="icon fa-brands fa-whatsapp"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="chrome">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-chrome"></i>
-          </div>
-        </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="snapchat">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-          </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-snapchat"></i>
+        <div class="twin">
+          <div class="card" data-twin="instagram">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back instagram">
+              <i class="icon fa-brands fa-instagram"></i>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="twin">
-        <div class="card" data-twin="snapchat">
-          <div class="card__face card__face--front">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
+        <div class="twin">
+          <div class="card" data-twin="instagram">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back instagram">
+              <i class="icon fa-brands fa-instagram"></i>
+            </div>
           </div>
-          <div class="card__face card__face--back">
-            <i class="fa-brands fa-snapchat"></i>
+        </div>
+        <div class="twin">
+          <div class="card" data-twin="amazon">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back amazon">
+              <i class="icon fa-brands fa-amazon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="twin">
+          <div class="card" data-twin="amazon">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back amazon">
+              <i class="icon fa-brands fa-amazon"></i>
+            </div>
+          </div>
+        </div>
+        <div class="twin">
+          <div class="card" data-twin="spotify">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back spotify">
+              <i class="icon fa-brands fa-spotify"></i>
+            </div>
+          </div>
+        </div>
+        <div class="twin">
+          <div class="card" data-twin="spotify">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back spotify">
+              <i class="icon fa-brands fa-spotify"></i>
+            </div>
+          </div>
+        </div>
+        <div class="twin">
+          <div class="card" data-twin="chrome">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back chrome">
+              <i class="icon fa-brands fa-chrome"></i>
+            </div>
+          </div>
+        </div>
+        <div class="twin">
+          <div class="card" data-twin="chrome">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back chrome">
+              <i class="icon fa-brands fa-chrome"></i>
+            </div>
+          </div>
+        </div>
+        <div class="twin">
+          <div class="card" data-twin="snapchat">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back snapchat">
+              <i class="icon fa-brands fa-snapchat"></i>
+            </div>
+          </div>
+        </div>
+        <div class="twin">
+          <div class="card" data-twin="snapchat">
+            <div class="card__face card__face--front">
+              <i class="icon fa-solid fa-wand-magic-sparkles"></i>
+            </div>
+            <div class="card__face card__face--back snapchat">
+              <i class="icon fa-brands fa-snapchat"></i>
+            </div>
           </div>
         </div>
       </div>

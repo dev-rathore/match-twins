@@ -5,32 +5,74 @@
 }
 
 body {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
   font-family: "Roboto", sans-serif;
 }
 
-.twins {
-  width: 340px;
+header {
+  padding-top: 50px;
+  padding-bottom: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+header p {
+  text-align: center;
+  font-size: 28px;
+  font-weight: 300;
+  color: #34495e;
+}
+
+.bold {
+  font-weight: 700;
+}
+.lightBlue {
+  color: #0c86dc;
+}
+.darkBlue {
+  color: #055187;
+}
+.red {
+  color: #da0e52;
+}
+.pink {
+  color: #f31b9b;
+}
+.green {
+  color: #28b463;
+}
+.orange {
+  color: #e67e22;
+}
+.purple {
+  color: #8e44ad;
+}
+
+main {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.twins {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-items: center;
+  gap: 10px 10px;
 }
 
 .twin {
-  width: 75px;
-  height: 75px;
+  width: 85px;
+  height: 85px;
   perspective: 600px;
-  margin: 5px;
   cursor: pointer;
   font-size: 22px;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+}
+
+.icon {
+  font-size: 40px;
 }
 
 .card {
@@ -53,8 +95,8 @@ body {
   justify-content: center;
   align-items: center;
   color: #fbfcfc;
-  background-color: #1b2631;
-  border: 2px solid #1b2631;
+  background-color: #212f3d;
+  border: 2px solid #212f3d;
 }
 
 .card__face--back {
@@ -62,9 +104,33 @@ body {
   justify-content: center;
   align-items: center;
   color: #fbfcfc;
-  background-color: #2e86c1;
-  border: 2px solid #21618c;
+  border: 2px solid #212f3d;
   transform: rotateY(180deg);
+}
+
+.whatsapp {
+  background-color: #0cd85c;
+}
+.spotify {
+  background-color: #22b462;
+}
+.windows {
+  background-color: #3498db;
+}
+.chrome {
+  background-color: #c76aff;
+}
+.snapchat {
+  background-color: #f4d03f;
+}
+.instagram {
+  background-color: #dc5299;
+}
+.apple {
+  background-color: #5d6d7e;
+}
+.amazon {
+  background-color: #22ddc1;
 }
 
 .card.flip {
@@ -72,14 +138,27 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-  /* .twins {
-    grid-template-columns: repeat(4, 45px);
-  } */
-  .twins {
-    width: 220px;
+  header p {
+    font-size: 20px;
   }
   .twin {
-    width: 45px;
-    height: 45px;
+    width: 65px;
+    height: 65px;
+  }
+  .icon {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  header p {
+    font-size: 18px;
+  }
+  .twin {
+    width: 50px;
+    height: 50px;
+  }
+  .icon {
+    font-size: 22px;
   }
 }
